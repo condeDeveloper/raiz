@@ -43,7 +43,7 @@ secante tem ordem 1,618 por passo e uma avaliação por passo. O número de ouro
 dois, e essa é a comparação que importa quando a função é cara.
 
 E há a desvantagem de Newton que nenhuma tabela de velocidade mostra: **ele precisa da derivada**.
-Numa função que vem de uma simulação ela não existe, e aproximá-la custa mais uma avaliação — o
+Numa função que vem de uma simulação ela não existe, e aproximá-la custa mais uma avaliação, o
 que transforma Newton numa secante mais cara.
 
 ## Como rodar
@@ -79,8 +79,8 @@ Na raiz tripla de `(x-1)³`, a falsa posição tira **menos de dois por cento do
 O erro dela encolhe como `1/√n`: para chegar a doze casas seriam uns 10²⁴ passos. Meu juiz a
 reprovava por isso, e o errado era o juiz.
 
-Hoje o contrato dele é o que de fato se pode garantir: **quem mantém o cerco nunca se perde** —
-mesmo sem convergir, o ponto devolvido continua dentro do intervalo original. Velocidade é
+Hoje o contrato dele é o que de fato se pode garantir: **quem mantém o cerco nunca se perde**.
+Mesmo sem convergir, o ponto devolvido continua dentro do intervalo original. Velocidade é
 assunto das tabelas.
 
 E a mesma tabela tem o resultado que eu não esperava: **na raiz tripla a bisseção ganha de todos.**
@@ -105,7 +105,7 @@ teste usa para provar que a mentira acontece.
 ### E a salvaguarda do método misto nunca disparava
 
 O método misto tenta o passo da secante e cai na bisseção quando ele não presta. A primeira versão
-exigia que o atalho caísse a menos de meia largura do meio do intervalo — condição que **todo**
+exigia que o atalho caísse a menos de meia largura do meio do intervalo, condição que **todo**
 ponto dentro do cerco satisfaz. A salvaguarda nunca disparava, e o método travava exatamente nas
 mesmas três funções que a falsa posição.
 
